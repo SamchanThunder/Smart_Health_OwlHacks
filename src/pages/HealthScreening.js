@@ -27,14 +27,14 @@ export function HealthScreening() {
     const handSelectChangeQuestionThree = (index, value) => {
         const newSelectedOptions = [...selectedOptions];
         if(newSelectedOptions[2].includes(value)){
-            newSelectedOptions[2] = newSelectedOptions[2].replace(","+value, "");
-            newSelectedOptions[2] = newSelectedOptions[2].replace(value+",", "");
+            newSelectedOptions[2] = newSelectedOptions[2].replace("|"+value, "");
+            newSelectedOptions[2] = newSelectedOptions[2].replace(value+"|", "");
             newSelectedOptions[2] = newSelectedOptions[2].replace(value, "");
         }else{
             if(newSelectedOptions[2] == ''){
                 newSelectedOptions[2] += value;
             }else{
-                newSelectedOptions[2] += "," + value; 
+                newSelectedOptions[2] += "|" + value; 
             }
         }
         setSelectedOptions(newSelectedOptions);
@@ -46,7 +46,7 @@ export function HealthScreening() {
             alert("Please answer all the questions.");
             return;
         }else{
-            let symptomsList = selectedOptions[2].split(",");
+            let symptomsList = selectedOptions[2].split("|");
             let conditionsList = [];
             for(let i = 0; i < symptomsList.length; i++){
                 for (const disease in Diseases){
