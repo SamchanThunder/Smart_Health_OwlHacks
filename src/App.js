@@ -1,10 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import { RouteFunction } from './scripts/routes';
 
 function App() {
   return (
-    <div className="App">
-      Test
+    <div>
+      <RouteFunction />
     </div>
   );
 }
