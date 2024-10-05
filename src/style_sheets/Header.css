@@ -1,0 +1,88 @@
+#webHeader {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    box-shadow: 0px 1px rgba(128, 128, 128, 0.363);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+    background-color: white;
+  }
+
+/* Logo box */
+#logoBox {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+#logo {
+    position: absolute;
+    color: rgb(255, 33, 33);
+    font-size: 23px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background: none;
+    border: none;
+    left: 75px;
+}
+
+/* Right header buttons */
+#rightHeaderButtons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1px;
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+#rhButton1 {
+    position: relative;
+    right: 100px;
+    width: 100px;
+    height: 70px;
+    background: none;
+    border: none;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+#rhButton2 {
+    position: relative;
+    right: 100px;
+    width: 100px;
+    height: 70px;
+    background: none;
+    border: none;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+#rhButton3 {
+    position: relative;
+    right: 100px;
+    width: 150px;
+    height: 70px;
+    border: none;
+    background-color: white;
+    display: flex;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+/* Hover effects for buttons */
+#rhButton1:hover,
+#rhButton2:hover,
+#rhButton3:hover {
+    cursor: pointer;
+    background-color: rgba(204, 204, 204, 0.4);
+}

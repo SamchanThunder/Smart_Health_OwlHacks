@@ -1,4 +1,5 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { Header } from '../pages/Header.js';
 import { StartPage } from '../pages/StartPage.js';
 import { HealthScreening } from '../pages/HealthScreening.js';
 import { Marketplace } from '../pages/marketplace.js';
@@ -6,6 +7,7 @@ import { Marketplace } from '../pages/marketplace.js';
 export function RouteFunction(){
     return(
         <Router>
+            <Header />
             <Routes>
                 <Route path="/Smart_Health_OwlHacks" element={<StartPage />}/>
                 <Route path="/Smart_Health_OwlHacks/healthscreening" element={<HealthScreening/>}/>
