@@ -1,6 +1,7 @@
-*{
+* {
     font-family: monospace;
 }
+
 .startPageContent {
     display: flex;
     justify-content: center;
@@ -20,13 +21,8 @@
     position: relative;
     bottom: 50px;
     background-color: #ebedf6;
+}
 
-}
-#SubCompare{
-    position: relative;
-    top: 30px;
-    border-bottom: 8px solid #ffffff;
-}
 #LogoImg {
     width: 600px;
 }
@@ -44,7 +40,8 @@
     position: relative;
     bottom: 60px;
 }
-#CButton1{
+
+#CButton1 {
     width: 120px;
     height: 50px;
     border: 2px solid rgb(98, 98, 98);
@@ -54,18 +51,20 @@
     font-size: 16px;
     margin: 0 10px;
 }
-#CButton2{
+
+#CButton2 {
     width: 150px;
     height: 50px;
     border: 2px solid #9a9a9a;
     border-radius: 15px;
-    background-color: rgb(98, 98, 98);;
+    background-color: rgb(98, 98, 98);
     color: #e7e7e7;
     font-size: 16px;
     margin: 0 10px;
 }
 
-#CButton1:hover, #CButton2:hover {
-    opacity: 90%;
+#CButton1:hover,
+#CButton2:hover {
+    opacity: 0.8;
     cursor: pointer;
 }

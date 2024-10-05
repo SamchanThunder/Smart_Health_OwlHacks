@@ -11,7 +11,7 @@ export function RouteFunction(){
             <Routes>
                 <Route path="/Smart_Health_OwlHacks" element={<StartPage />}/>
                 <Route path="/Smart_Health_OwlHacks/healthscreening" element={<HealthScreening/>}/>
-                <Route path="/Smart_Health_OwlHacks/marketplace" element={<Marketplace/>}/>
+                <Route path="/Smart_Health_OwlHacks/prices" element={<Marketplace/>}/>
             </Routes>
         </Router>
     )
