@@ -27,6 +27,8 @@
     justify-content: center; 
     align-items: center;
     flex-grow: 1;
+    position: relative;
+    right: 30px;
 }
 
 #firstButton, #secondButton {
@@ -40,6 +42,9 @@
     margin: 0 10px;
     font-size: 15px;
     font-family: monospace;
+}
+#secondButton{
+    color: rgb(76, 76, 76);
 }
 
 #firstButton:hover, #secondButton:hover {
@@ -57,7 +62,7 @@
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    left: -40px;
+    left: -50px;
 }
 
 #rhButton:hover {

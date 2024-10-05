@@ -1,18 +1,20 @@
 import '../style_sheets/Header.css';
 import pencil from '../images/pencil.svg';
-import logo from '../images/Canva_Logo.svg.png';
+import logo from '../images/logo.png';
 
 export function Header() {
     return (
         <header id="webHeader" data-visible-range="0">
             <div id="logoBox">
                 <button id="logo">
-                    <img src={logo} style={{ width: "170px", height: "40px" }} alt="Logo" />
+                    <img src={logo} style={{ width: "200px", height: "100px" }} alt="Logo" />
                 </button>
             </div>
             <div id="buttonContainer">
-                <button id="firstButton">DRUGS</button>
+            <button id="firstButton">ABOUT US</button>
+                <button id="secondButton">DRUGS</button>
                 <button id="secondButton">SCREENING</button>
+                <button id="secondButton">COMPARE</button>
             </div>
             <div>
                 <button id="rhButton">
