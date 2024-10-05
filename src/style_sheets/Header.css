@@ -1,88 +1,89 @@
 #webHeader {
     position: fixed;
     width: 100%;
-    height: 100px;
-    box-shadow: 0px 1px rgba(128, 128, 128, 0.363);
+    height: 80px;
+    box-shadow: 0px 1px rgba(128, 128, 128, 0.36);
     display: flex;
-    justify-content: space-between;
     align-items: center;
     z-index: 4;
     background-color: white;
-  }
+    padding: 0 20px;
+}
 
-/* Logo box */
 #logoBox {
-    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
+}
+
 #logo {
-    position: absolute;
     color: rgb(255, 33, 33);
-    font-size: 23px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
     background: none;
     border: none;
-    left: 75px;
 }
 
-/* Right header buttons */
-#rightHeaderButtons {
+#buttonContainer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center; 
     align-items: center;
-    gap: 1px;
-    margin-left: auto;
-    margin-right: 15px;
+    flex-grow: 1;
 }
 
-#rhButton1 {
-    position: relative;
-    right: 100px;
+#firstButton, #secondButton {
     width: 100px;
-    height: 70px;
-    background: none;
-    border: none;
-    color: black;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 15px;
-}
-
-#rhButton2 {
-    position: relative;
-    right: 100px;
-    width: 100px;
-    height: 70px;
-    background: none;
-    border: none;
-    color: black;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 15px;
-}
-
-#rhButton3 {
-    position: relative;
-    right: 100px;
-    width: 150px;
-    height: 70px;
+    height: 40px;
     border: none;
     background-color: white;
     display: flex;
-    border-radius: 15px;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    margin: 0 10px;
+    font-size: 15px;
+    font-family: monospace;
 }
 
-/* Hover effects for buttons */
-#rhButton1:hover,
-#rhButton2:hover,
-#rhButton3:hover {
+#firstButton:hover, #secondButton:hover {
     cursor: pointer;
-    background-color: rgba(204, 204, 204, 0.4);
+    border-bottom: 3px solid rgb(168, 168, 168);
+}
+
+#rhButton {
+    width: 170px; 
+    height: 40px;
+    border: 1px solid rgb(162, 162, 162);
+    background-color: white;
+    display: flex;
+    border-radius: 30px;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    left: -40px;
+}
+
+#rhButton:hover {
+    cursor: pointer;
+    box-shadow: 0px 2px 2px rgba(172, 172, 172, 0.842);
+}
+
+#rhText {
+    font-size: 15px;
+    font-family: monospace;
+    padding-left: 22px;
+}
+
+#rhImage {
+    position: absolute;
+    left: 132px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 32px;
+    background-color: blue; 
+    border-radius: 30px;
+}
+
+#pencil {
+    width: 25px;
+    height: 25px;
 }
