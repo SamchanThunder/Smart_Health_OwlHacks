@@ -1,0 +1,8 @@
+.MarketContainer{
+    padding-top: 100px;
+}
+
+
+tr, th {
+    border: solid .5px;
+}
