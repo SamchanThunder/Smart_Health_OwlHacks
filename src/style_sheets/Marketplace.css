@@ -1,0 +1,78 @@
+* {
+    font-family: monospace;
+}
+
+.marketContainer {
+    padding-top: 120px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #8d98cc;
+}
+
+.searchBar {
+    display: block;
+    margin: 0 auto; 
+    margin-top: 15px;
+    padding: 10px;
+    width: 50%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 600px; 
+    color: rgb(107, 106, 106);
+}
+
+.keyContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 20px;
+    width: 100%;
+}
+
+.subKeyContainer {
+    width: 400px;
+    height: 220px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    border: 2px solid #8d98cc;
+}
+
+.subKeyContainer:hover {
+    scale: 1.05;
+}
+
+.key {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    text-decoration: none;
+    text-align: center;
+    width: 100%; 
+}
+
+.medName {
+    color: black;
+    font-weight: bold;
+}
+
+.medStrength {
+    color: gray;
+    font-size: 25px;
+    padding-bottom: 20px;
+    padding-top: 5px;
+    border-bottom: 1px solid #8d98cc;
+}
+
+.price {
+    color: green;
+    font-size: 28px;
+    padding-top: 32px;
+}

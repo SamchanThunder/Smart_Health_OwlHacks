@@ -31,7 +31,7 @@ export function HealthScreening() {
             newSelectedOptions[2] = newSelectedOptions[2].replace(value+"|", "");
             newSelectedOptions[2] = newSelectedOptions[2].replace(value, "");
         }else{
-            if(newSelectedOptions[2] == ''){
+            if(newSelectedOptions[2] === ''){
                 newSelectedOptions[2] += value;
             }else{
                 newSelectedOptions[2] += "|" + value; 
@@ -56,13 +56,12 @@ export function HealthScreening() {
                 }
             }
             conditionsList = removeAndUniquify(conditionsList);
-            if(conditionsList.length == 0){
+            if(conditionsList.length === 0){
                 setZeroConditions(true);
             }
 
             setConditions(conditionsList);
             setQuizCompleted(true);
-            alert("Scroll Down");
         }   
     };
 
@@ -85,7 +84,7 @@ export function HealthScreening() {
 
     return (
         <div className="ScreeningContainer">
-            <div id="title"><u>Symptoms Quiz</u></div>
+            <div id="title"><u>Symptoms Checker</u></div>
             <div className="SubScreeningContainer">
                 {questions.map((item, index) => (
                     <div key={index} className="question">
@@ -145,7 +144,7 @@ export function HealthScreening() {
                     <div className="analysisTitle">Your possible conditions:</div>
                     <div className="analysisBody">
                     {zeroConditions && 
-                        <div className="analysisKey">There is not enough symptoms to provide you with a potential condition.</div>
+                        <div className="analysisKey">There is not enough information to provide you with a potential condition.</div>
                     }
                     {conditions.map((condition, index) => (
                         <a 

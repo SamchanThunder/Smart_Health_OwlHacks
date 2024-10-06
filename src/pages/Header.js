@@ -17,7 +17,7 @@ export function Header() {
             <button id="firstButton" onClick={() => newPage("/Smart_Health_OwlHacks")}>ABOUT US</button>
                 <button id="secondButton" onClick={() => newPage("/Smart_Health_OwlHacks/prices")}>DRUGS</button>
                 <button id="secondButton" onClick={() => newPage("/Smart_Health_OwlHacks/healthscreening")}>SCREENING</button>
-                <button id="secondButton" onClick={() => newPage("/Smart_Health_OwlHacks")}>COMPARE</button>
+                <button id="secondButton" onClick={() => newPage("/Smart_Health_OwlHacks/compare")}>COMPARE</button>
             </div>
             <div>
                 <button id="rhButton">
