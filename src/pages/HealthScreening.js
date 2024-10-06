@@ -65,6 +65,12 @@ export function HealthScreening() {
         }   
     };
 
+    const clearSymptoms = () =>{
+        const newSelectedOptions = [...selectedOptions];
+        newSelectedOptions[2] = '';
+        setSelectedOptions(newSelectedOptions);
+    }
+
     const removeAndUniquify = (arr) => {
         const countMap = {};
         arr.forEach((item) => {
@@ -135,12 +141,19 @@ export function HealthScreening() {
                         )}
                     </div>
                 ))}
+                <button onClick={clearSymptoms} className="clearButton">CLEAR</button>
                 <div className="symptoms">{selectedOptions[2]}</div>
             </div>
-            <button onClick={handleSubmit} className="submitButton">Submit</button>
+            <button onClick={handleSubmit} className="submitButton">SUBMIT</button>
 
             {quizCompleted && 
                 <div className="analysisContainer">
+                    <div className="analysisTitle">Age Group: </div> 
+                    <div className="analysisKey">{selectedOptions[0]}</div>
+
+                    <div className="analysisTitle">Gender: </div>
+                    <div className="analysisKey">{selectedOptions[1]}</div>
+
                     <div className="analysisTitle">Your possible conditions:</div>
                     <div className="analysisBody">
                     {zeroConditions && 

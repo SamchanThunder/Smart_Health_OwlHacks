@@ -1,5 +1,6 @@
 * {
     font-family: monospace;
+    box-sizing: border-box;
 }
 
 .ScreeningContainer {
@@ -23,14 +24,6 @@
     color: #8d98cc;
 }
 
-.question {
-    margin: 40px 0;
-    font-size: 30px;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    width: 100%;
-}
 
 label {
     display: block; 
@@ -61,11 +54,31 @@ label {
     font-size: 30px;
     transition: opacity 0.3s;
 }
-
 .submitButton:hover {
     cursor: pointer;
     opacity: 0.8;
 }
+
+.clearButton {
+    display: block; 
+    margin: 20px auto; 
+    width: 100px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: #ebebeb;
+    border: 2px solid rgb(176, 176, 176);
+    color: rgb(138, 138, 138);
+    font-weight: bold;
+    font-size: 15px;
+    transition: opacity 0.3s;
+    position: relative;
+    bottom: 30px;
+}
+.clearButton:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
 
 .customDropdown {
     position: absolute;
@@ -92,14 +105,24 @@ label {
     background-color: #f0f0f0;
 }
 
-.searchInput{
+.question {
+    margin: 40px 0;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    width: auto; /* Change to auto or a specific width */
+}
+
+.searchInput {
     height: 45px;
-    width: 195px;
+    width: 200px; /* Set this to a specific width */
     font-size: 15px;
     border-radius: 10px;
     border: 1px solid rgb(113, 113, 113);
     text-align: center;
     margin-top: 20px;
+    display: inline-block; /* Ensure it's inline */
 }
 .symptoms {
     display: flex;
@@ -126,12 +149,13 @@ label {
 .analysisTitle{
     font-weight: bold;
     font-size: 30px;
-    color:rgb(113, 113, 113)
+    color:rgb(113, 113, 113);
+    margin: 10px;
 }
 
 .analysisKey{
     margin: 20px;
     font-size: 20px;
     display: block;
-    color:rgb(113, 113, 113)
+    color:rgb(113, 113, 113);
 }

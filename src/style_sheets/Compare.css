@@ -1,7 +1,89 @@
 * {
+    box-sizing: border-box;
     font-family: monospace;
 }
 
 .compareContainer {
-    padding-top: 100px;
+    padding: 120px;
+    text-align: center;
+    overflow-x: hidden; 
+}
+
+.searchContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.leftSearch, .rightSearch {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selectedDrug {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.searchInputCompare {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.drugListContainer {
+    height: 425px; 
+    overflow-y: auto; 
+    overflow-x: hidden; 
+    width: 100%;
+}
+
+.drugList {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; 
+}
+
+.drugItem {
+    padding: 10px;
+    margin: 5px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.drugItem:hover {
+    background-color: #f0f0f0;
+}
+
+.compareButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8d98cc;
+    color: white;
+    cursor: pointer;
+    margin-top: 30px;
+    width: 200px;
+    height: 70px;
+    font-size: 30px;
+}
+
+.selectedDrug{
+    margin-top: 20px;;
+    font-size: 20px;
+}
+
+.compareAnswer{
+    font-size: 40px;
+    color: rgb(141, 141, 141);
 }
