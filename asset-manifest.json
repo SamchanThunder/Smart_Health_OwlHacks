@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Smart_Health_OwlHacks/static/css/main.c845fc5f.css",
-    "main.js": "/Smart_Health_OwlHacks/static/js/main.4997996f.js",
+    "main.css": "/Smart_Health_OwlHacks/static/css/main.fbcc5cb2.css",
+    "main.js": "/Smart_Health_OwlHacks/static/js/main.b763fdc8.js",
     "static/js/453.19f0620f.chunk.js": "/Smart_Health_OwlHacks/static/js/453.19f0620f.chunk.js",
     "static/media/logo.png": "/Smart_Health_OwlHacks/static/media/logo.c74cf84d8aa11a7a8a54.png",
     "static/media/pencil.svg": "/Smart_Health_OwlHacks/static/media/pencil.52ceb05c64935c8c3f7b9f0759613441.svg",
     "index.html": "/Smart_Health_OwlHacks/index.html",
-    "main.c845fc5f.css.map": "/Smart_Health_OwlHacks/static/css/main.c845fc5f.css.map",
-    "main.4997996f.js.map": "/Smart_Health_OwlHacks/static/js/main.4997996f.js.map",
+    "main.fbcc5cb2.css.map": "/Smart_Health_OwlHacks/static/css/main.fbcc5cb2.css.map",
+    "main.b763fdc8.js.map": "/Smart_Health_OwlHacks/static/js/main.b763fdc8.js.map",
     "453.19f0620f.chunk.js.map": "/Smart_Health_OwlHacks/static/js/453.19f0620f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c845fc5f.css",
-    "static/js/main.4997996f.js"
+    "static/css/main.fbcc5cb2.css",
+    "static/js/main.b763fdc8.js"
   ]
 }
