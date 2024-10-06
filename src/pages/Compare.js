@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useDrugData } from '../scripts/drugData';
 
 export function Compare() {
-    const { drugs, error } = useDrugData();
+    const { drugs, loading, error } = useDrugData();
     const [searchQueryLeft, setSearchQueryLeft] = useState('');
     const [searchQueryRight, setSearchQueryRight] = useState('');
     const [selectedDrugLeft, setSelectedDrugLeft] = useState(null);
@@ -58,54 +58,58 @@ export function Compare() {
         <div className="compareContainer">
             {isAnswer && <div className="compareAnswer">{answer}</div>}
             <button onClick={handleCompare} className="compareButton">Compare</button>
-            <div className="searchContainer">
-                <div className="leftSearch">
-                    <div className="selectedDrug">{selectedDrugLeft ? `${selectedDrugLeft.medication_name} (${selectedDrugLeft.strength})` : 'Selected Drug'}</div>
-                    <input 
-                        type="text" 
-                        placeholder="Select a drug..." 
-                        value={searchQueryLeft} 
-                        onChange={handleSearchLeft} 
-                        className="searchInputCompare"
-                    />
-                    <div className="drugListContainer"> 
-                        <div className="drugList">
-                            {filteredDrugsLeft.map((drug) => (
-                                <div 
-                                    key={drug.id} 
-                                    className="drugItem" 
-                                    onClick={() => handleSelectDrugLeft(drug)}
-                                >
-                                    {drug.medication_name} ({drug.strength})
-                                </div>
-                            ))}
+            {loading ? ( 
+                <div className="loading">Loading...</div>
+            ) : (
+                <div className="searchContainer">
+                    <div className="leftSearch">
+                        <div className="selectedDrug">{selectedDrugLeft ? `${selectedDrugLeft.medication_name} (${selectedDrugLeft.strength})` : 'Selected Drug'}</div>
+                        <input 
+                            type="text" 
+                            placeholder="Select a drug..." 
+                            value={searchQueryLeft} 
+                            onChange={handleSearchLeft} 
+                            className="searchInputCompare"
+                        />
+                        <div className="drugListContainer"> 
+                            <div className="drugList">
+                                {filteredDrugsLeft.map((drug) => (
+                                    <div 
+                                        key={drug.id} 
+                                        className="drugItem" 
+                                        onClick={() => handleSelectDrugLeft(drug)}
+                                    >
+                                        {drug.medication_name} ({drug.strength})
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="rightSearch">
+                        <div className="selectedDrug">{selectedDrugRight ? `${selectedDrugRight.medication_name} (${selectedDrugRight.strength})` : 'Selected drug'}</div>
+                        <input 
+                            type="text" 
+                            placeholder="Select a drug..." 
+                            value={searchQueryRight} 
+                            onChange={handleSearchRight} 
+                            className="searchInputCompare"
+                        />
+                        <div className="drugListContainer">
+                            <div className="drugList">
+                                {filteredDrugsRight.map((drug) => (
+                                    <div 
+                                        key={drug.id} 
+                                        className="drugItem" 
+                                        onClick={() => handleSelectDrugRight(drug)}
+                                    >
+                                        {drug.medication_name} ({drug.strength})
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className="rightSearch">
-                    <div className="selectedDrug">{selectedDrugRight ? `${selectedDrugRight.medication_name} (${selectedDrugRight.strength})` : 'Selected drug'}</div>
-                    <input 
-                        type="text" 
-                        placeholder="Select a drug..." 
-                        value={searchQueryRight} 
-                        onChange={handleSearchRight} 
-                        className="searchInputCompare"
-                    />
-                    <div className="drugListContainer">
-                        <div className="drugList">
-                            {filteredDrugsRight.map((drug) => (
-                                <div 
-                                    key={drug.id} 
-                                    className="drugItem" 
-                                    onClick={() => handleSelectDrugRight(drug)}
-                                >
-                                    {drug.medication_name} ({drug.strength})
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div>
+            )}
         </div>
     );
 }

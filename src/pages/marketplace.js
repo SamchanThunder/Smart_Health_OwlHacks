@@ -1,9 +1,9 @@
-import '../style_sheets/Marketplace.css';
 import React, { useState } from 'react';
 import { useDrugData } from '../scripts/drugData';
+import '../style_sheets/Marketplace.css';
 
 export const Marketplace = () => {
-  const { drugs, error } = useDrugData();
+  const { drugs, loading, error } = useDrugData(); 
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleSearch = (event) => {
@@ -31,15 +31,21 @@ export const Marketplace = () => {
       />
 
       <div className="keyContainer">
-        {filteredDrugs.map((drug, index) => (
-          <div className="subKeyContainer" key={index}>
-            <a className="key" href={drug.url} target="_blank" rel="noopener noreferrer">
-              <div className="medName">{drug.medication_name}</div>
-              <div className="medStrength">({drug.strength})</div>
-              <div className="price">{drug.unit_price} per unit</div>
-            </a>
+        {loading ? ( 
+          <div className="loading">Loading...</div>
+        ) : (
+          <div className="drugsListContainer"> {/* Added container for drugs */}
+            {filteredDrugs.map((drug, index) => (
+              <div className="subKeyContainer" key={index}>
+                <a className="key" href={drug.url} target="_blank" rel="noopener noreferrer">
+                  <div className="medName">{drug.medication_name}</div>
+                  <div className="medStrength">({drug.strength})</div>
+                  <div className="price">{drug.unit_price} per unit</div>
+                </a>
+              </div>
+            ))}
           </div>
-        ))}
+        )}
       </div>
     </div>
   );
